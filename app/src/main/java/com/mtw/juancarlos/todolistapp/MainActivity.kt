@@ -25,7 +25,7 @@ import android.support.v7.widget.helper.ItemTouchHelper
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewAdapter : RecyclerView.Adapter<*>
+    private lateinit var viewAdapter : TaskAdapter
     private lateinit var viewManager : RecyclerView.LayoutManager
 
     val taskList: ArrayList<TaskEntry> = ArrayList()
