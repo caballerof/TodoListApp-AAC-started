@@ -71,6 +71,7 @@ class AddTaskActivity : AppCompatActivity() {
      */
     fun onSaveButtonClicked() {
         // Not yet implemented
+        // TODO (8) Save Task
     }
 
     /**

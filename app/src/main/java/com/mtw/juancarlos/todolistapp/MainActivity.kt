@@ -112,4 +112,9 @@ class MainActivity : AppCompatActivity() {
         // Launch AddTaskActivity adding the itemId as an extra in the intent
         Toast.makeText(this,"Clicked item" + task.description,Toast.LENGTH_LONG).show()
     }
+    //TODO (9) Consultar todas las tareas en onResume
+    //TODO (10) Crear clase doAsync : AsyncTask quitar allowmainThreadQuery
+    //TODO (11) Implementar DeleteTask swipe
+    // TODO (12) Query parameter en TaskDao loadTaskbyId
+    // TODO (13) Update Task pasar ID con intent
 }
