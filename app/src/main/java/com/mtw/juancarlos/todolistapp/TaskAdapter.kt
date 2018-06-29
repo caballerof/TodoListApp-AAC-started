@@ -17,7 +17,7 @@ import kotlin.collections.ArrayList
  * This TaskAdapter creates and binds ViewHolders, that hold the description and priority of a task,
  * to a RecyclerView to efficiently display data.
  */
-class TaskAdapter(private var mTaskEntries:ArrayList<TaskEntry>, private val mContext: Context, private val clickListener: (TaskEntry) -> Unit) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+class TaskAdapter(private var mTaskEntries:List<TaskEntry>, private val mContext: Context, private val clickListener: (TaskEntry) -> Unit) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
 
     /**
@@ -49,7 +49,7 @@ class TaskAdapter(private var mTaskEntries:ArrayList<TaskEntry>, private val mCo
      * When data changes, this method updates the list of taskEntries
      * and notifies the adapter to use the new values on it
      */
-    fun setTask(taskEntries: ArrayList<TaskEntry>){
+    fun setTask(taskEntries: List<TaskEntry>){
         mTaskEntries = taskEntries
         notifyDataSetChanged()
     }
