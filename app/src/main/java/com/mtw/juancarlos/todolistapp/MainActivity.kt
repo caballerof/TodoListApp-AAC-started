@@ -28,14 +28,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewAdapter : TaskAdapter
     private lateinit var viewManager : RecyclerView.LayoutManager
 
-    val taskList: ArrayList<TaskEntry> = ArrayList()
+    val taskList: List<TaskEntry> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        addTasks()
+        //addTasks()
         viewManager = LinearLayoutManager(this)
         viewAdapter = TaskAdapter(taskList,this, {task:TaskEntry -> onItemClickListener(task)})
 
@@ -102,11 +102,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun addTasks(){
+    /*fun addTasks(){
         taskList.add(TaskEntry(1,"Tarea 1",1,Date()))
         taskList.add(TaskEntry(2,"Tarea 2",2,Date()))
 
-    }
+    }*/
 
     private fun onItemClickListener(task:TaskEntry){
         // Launch AddTaskActivity adding the itemId as an extra in the intent
