@@ -25,8 +25,8 @@ import android.support.v7.widget.helper.ItemTouchHelper
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewAdapter : TaskAdapter
-    private lateinit var viewManager : RecyclerView.LayoutManager
+    private lateinit var viewAdapter: TaskAdapter
+    private lateinit var viewManager: RecyclerView.LayoutManager
 
     val taskList: List<TaskEntry> = ArrayList()
 
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         //addTasks()
         viewManager = LinearLayoutManager(this)
-        viewAdapter = TaskAdapter(taskList,this, {task:TaskEntry -> onItemClickListener(task)})
+        viewAdapter = TaskAdapter(taskList, this, { task: TaskEntry -> onItemClickListener(task) })
 
         recyclerViewTasks.apply {
             // use this setting to improve performance if you know that changes
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             // Initialize the adapter and attach it to the RecyclerView
             adapter = viewAdapter
 
-            addItemDecoration(DividerItemDecoration(this@MainActivity,DividerItemDecoration.VERTICAL))
+            addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
 
         }
 
@@ -108,13 +108,17 @@ class MainActivity : AppCompatActivity() {
 
     }*/
 
-    private fun onItemClickListener(task:TaskEntry){
+    private fun onItemClickListener(task: TaskEntry) {
         // Launch AddTaskActivity adding the itemId as an extra in the intent
-        Toast.makeText(this,"Clicked item" + task.description,Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Clicked item" + task.description, Toast.LENGTH_LONG).show()
     }
+}
     //TODO (9) Consultar todas las tareas en onResume
     //TODO (10) Crear clase doAsync : AsyncTask quitar allowmainThreadQuery
     //TODO (11) Implementar DeleteTask swipe
     // TODO (12) Query parameter en TaskDao loadTaskbyId
-    // TODO (13) Update Task pasar ID con intent
-}
+    // TODO (14) LOG onResume
+    //TODO (16) Change TaskDao add LiveData to loadAllTask()
+    //TODO (17) Change TaskDao add LiveData to loadTaskById
+    //TODO (18) ViewModel to MainActivity
+    //TODO (19) ADD ViewModel to AddTaskActivity
